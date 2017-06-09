@@ -39,12 +39,13 @@ const DECADE = 10;
 const CENTURY = 100;
 
 
+/**
+ * Return number of days in the month, accounting for leap years
+ * @param {number} month - month of the year
+ * @param {number} year - to check if leap
+ * @returns {number} - number of days in the month
+ */
 function monthDays (month, year) {
-    /**
-     * Return number of days in the month, accounting for leap years
-     * @param {number} month - month of the year
-     * @param {number} year - to check if leap
-     */
     if (month === FEB) {
         if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
             return FEB_LEAP;
@@ -152,6 +153,11 @@ const update = {
 };
 
 
+/**
+ * Update the calendar based on the arrow clicked by user
+ * @param {function} funcToCall - calendar update function
+ * @returns {number} - updates month, year, or both
+ */
 function mainInit (funcToCall) {
     document.getElementById("cal").innerHTML = "";
     if (funcToCall === "calInit") {
@@ -181,6 +187,7 @@ function updateCalendar (evnt) {
 document.addEventListener("DOMContentLoaded", function () {
     mainInit("calInit");
 }, false);
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const allButtons = document.getElementById("dates");
