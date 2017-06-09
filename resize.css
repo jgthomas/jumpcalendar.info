@@ -1,0 +1,125 @@
+@media screen and (min-width: 2220px) {
+    html {
+        font-size: 150%; /* Base font-size of 32px */
+    }
+}
+
+
+@media screen and (max-width: 1920px) {
+    html {
+        font-size: 100%; /* Base font-size of 32px */
+    }
+}
+
+
+@media screen and (max-width: 1800px) {
+    html {
+        font-size: 95%; /* Base font-size of 32px */
+    }
+}
+
+
+@media screen and (max-width: 1700px) {
+    html {
+        font-size: 90%; /* Base font-size of 32px */
+    }
+}
+
+
+@media screen and (max-width: 1650px) {
+    html {
+        font-size: 85%; /* Base font-size of 32px */
+    }
+}
+
+
+
+@media screen and (max-width: 1600px) {
+    html {
+        font-size: 80%; /* Base font-size of 32px */
+    }
+}
+
+
+@media screen and (max-width: 1500px) {
+    html {
+        font-size: 75%; /* Base font-size of 32px */
+    }
+}
+
+
+@media screen and (max-width: 1400px) {
+    html {
+        font-size: 70%; /* Base font-size of 32px */
+    }
+}
+
+
+@media screen and (max-width: 1300px) {
+    html {
+        font-size: 65%; /* Base font-size of 32px */
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 60%; /* Base font-size of 32px */
+    }
+}
+
+
+@media screen and (max-width: 1100px) {
+    html {
+        font-size: 55%; /* Base font-size of 32px */
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    html {
+        font-size: 50%; /* Base font-size of 32px */
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    html {
+        font-size: 45%; /* Base font-size of 32px */
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    html {
+        font-size: 40%; /* Base font-size of 32px */
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    html {
+        font-size: 35%; /* Base font-size of 32px */
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 30%; /* Base font-size of 32px */
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 25%; /* Base font-size of 32px */
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    html {
+        font-size: 20%; /* Base font-size of 32px */
+    }
+}

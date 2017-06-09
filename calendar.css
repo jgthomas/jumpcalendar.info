@@ -1,0 +1,164 @@
+.calendarTable {
+    border: none;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    }
+
+
+.calendarTable td {
+    text-align: center;
+    height: 3.5em;
+    width: 3.5em;
+    }
+
+
+.calendarTable td.monthHead {
+    font-weight: bolder;
+    font-size: 3em;
+    border: none;
+    }
+
+
+.calendarTable td.weekDay {
+    font-weight: bold;
+    font-size: 2em;
+    }
+
+
+
+.calendarTable td.monthDay {
+    border: none;
+    font-weight: normal;
+    font-size: 2em;
+    }
+
+
+
+.calendarTable td.currentDay {
+    font-weight: bold;
+    font-size: 2em;
+    /*color: rgba(245, 13, 9, 1);*/
+    border-bottom: solid;
+    border-color: rgba(88, 117, 238, 1);
+    /*border-radius: 40%;*/
+    }
+
+
+.head {
+    text-align: center;
+    width: 50%;
+    margin-top: 1.5em;
+    margin-left: 25%;
+    margin-right: 25%;
+    }
+
+
+.btn {
+    font-weight: bolder;
+    font-size: 1.5em;
+    text-decoration: none;
+    background: transparent;
+    border-style: none;
+    outline: none;
+    color: black;
+    }
+
+
+.but1 {
+    width: 15%;
+    height: 2.5em;
+    text-align: left;
+    float: left;
+    }
+
+.but2 {
+    width: 15%;
+    height: 2.5em;
+    text-align: right;
+    float: right;
+    }
+
+.butmid {
+    vertical-align: middle;
+    display: inline-block;
+    text-align: center;
+    height: 2.5em;
+}
+
+.tit {
+    /*float: left;*/
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 2.5em;
+    font-size: 2.5em;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 2.5em;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+#minusMonth:hover {
+    color: rgba(88, 117, 238, 1);
+    }
+
+#plusMonth:hover {
+    color: rgba(88, 117, 238, 1);
+    }
+
+#calInit:hover {
+    color: rgba(88, 117, 238, 1);
+    }
+    
+
+.timeArrow {
+  text-decoration: none;
+  background: transparent;
+  border-style: none;
+  outline: none;
+  color: black;
+  }
+
+.timeArrow:hover {
+  color: rgba(88, 117, 238, 1);
+  }
+
+.centArrow {
+  font-size: 1.75em;
+  }
+
+#minusCentury {
+  float: left;
+  }
+
+#plusCentury {
+  float: right;
+  }
+  
+.decArrow {
+  font-size: 1.5em;
+  }
+  
+#minusDecade {
+  float: left;
+  }
+
+#plusDecade {
+  float: right;
+  }
+  
+.yearArrow {
+  font-size: 1.25em;
+  }
+
+#minusYear { 
+  float: left;
+  }
+
+#plusYear {
+  float: right;
+  }
