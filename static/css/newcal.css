@@ -1,5 +1,26 @@
 body {
-        font-family: sans-serif;
+    font-family: "MyriadPro-Regular", sans-serif;
+    }
+    
+@font-face
+{
+font-family: MyriadPro-Regular;
+font-style: normal;
+src: url('static/fonts/MYRIADPRO-REGULAR.OTF')
+}
+
+@font-face
+{
+font-family: "MyriadPro-Cond";
+font-style: normal;
+src: url('static/fonts/MYRIADPRO-COND.OTF')
+}
+
+@font-face
+{
+font-family: "catull";
+font-style: normal;
+src: url('static/fonts/catull.ttf')
 }
 
 .flex-container {
