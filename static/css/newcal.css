@@ -2,25 +2,16 @@ body {
     font-family: "MyriadPro-Regular", sans-serif;
     }
     
-@font-face
-{
-font-family: MyriadPro-Regular;
-font-style: normal;
-src: url('static/fonts/MYRIADPRO-REGULAR.OTF')
+@font-face {
+        font-family: MyriadPro-Regular;
+        font-style: normal;
+        src: url('../fonts/MYRIADPRO-REGULAR.OTF')
 }
 
-@font-face
-{
-font-family: "MyriadPro-Cond";
-font-style: normal;
-src: url('static/fonts/MYRIADPRO-COND.OTF')
-}
-
-@font-face
-{
-font-family: "catull";
-font-style: normal;
-src: url('static/fonts/catull.ttf')
+@font-face {
+        font-family: "MyriadPro-Cond";
+        font-style: normal;
+        src: url('../fonts/MYRIADPRO-COND.OTF')
 }
 
 .flex-container {
@@ -44,6 +35,10 @@ src: url('static/fonts/catull.ttf')
         flex: 0 0 14.28%;
 }
 
+.flex-sixth {
+        flex: 0 0 16.66%;
+}
+
 .flex-quarter {
         flex: 0 0 25%;
 }
@@ -56,11 +51,14 @@ src: url('static/fonts/catull.ttf')
         font-size: 5vw;
         text-align: center;
         margin-top: 3%;
+        font-weight: bold;
 }
 
 .current-day {
         font-weight: bold;
+        color: rgba(88, 117, 238, 1);
 }
+
 
 /* Assume mobile */
 
@@ -82,18 +80,16 @@ src: url('static/fonts/catull.ttf')
 
 .arrow {
         margin-bottom: 1%;
+        font-size: 3vw;
 }
 
 .cent {
-        font-size: 5vw;
 }
 
 .dec {
-        font-size: 5vw;
 }
 
 .year {
-        font-size: 5vw;
 }
 
 .month {
@@ -102,7 +98,7 @@ src: url('static/fonts/catull.ttf')
 }
 
 .year-jump {
-        margin-top: 5%;
+        margin-top: 1%;
 }
 
 .today-button {
@@ -142,7 +138,7 @@ src: url('static/fonts/catull.ttf')
         
         .date {
                 margin-bottom: 10%;
-                font-size: 3em;
+                font-size: 2.5em;
         }
         
         .title {
