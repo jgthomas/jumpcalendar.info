@@ -31,8 +31,7 @@ const FEB = 1;
 const DEC = 11;
 const FEB_LEAP = 29;
 
-const MON = 0;
-const SUN = 6;
+const MON = 1;
 const WEEK_LENGTH = 7;
 
 const DECADE = 10;
@@ -63,13 +62,11 @@ function drawCalendar (month, year) {
     let calendarCell = 0;
     let calendarDates = '';
 
-    // Fill first row of the month with empty cells until the month starts
-    for (let weekStart = 1; weekStart < firstWeekDay; weekStart++) {
-        calendarDates += '<div class="flex-unit flex-seventh date">&nbsp;</div>';
+    for (let weekStart = MON; weekStart < firstWeekDay; weekStart++) {
+        calendarDates += "<div class='flex-unit flex-seventh date'>&nbsp;</div>";
         calendarCell++;
     }
 
-    // Populate the days in the month
     for (let dayCounter = 1; dayCounter <= daysInThisMonth; dayCounter++) {
         if (dateToday === dayCounter) {
             if (month === currentMonth && year === currentYear) {
@@ -83,58 +80,13 @@ function drawCalendar (month, year) {
         calendarCell++;
     }
 
-    while (calendarCell % 7 !== 0) {
-        calendarDates += '<div class="flex-unit flex-seventh date">&nbsp;</div>';
+    while (calendarCell % WEEK_LENGTH !== 0) {
+        calendarDates += "<div class='flex-unit flex-seventh date'>&nbsp;</div>";
         calendarCell++;
     }
 
     document.getElementById("drawCalendar").textContent = `${MONTHS[month].name} ${year}`;
     document.getElementById("dates").innerHTML = calendarDates;
-}
-
-
-function calInit (month, year) {
-    const dateToday = fullDateToday.getDate();
-    const daysInThisMonth = monthDays(month, year);
-    const firstWeekDay = new Date(year, month).getDay();
-    // Start calendar
-    let calendarFigure = "<table class='calendarTable'><tr>";
-    // Display day names
-    for (let weekDayName = MON; weekDayName <= SUN; weekDayName++) {
-        calendarFigure += `<td class="weekDay"> ${DAYS[weekDayName]} </td>`;
-    }
-    // Close day name row
-    calendarFigure += "</tr><tr>";
-    // Fill first row of the month with empty cells until the month starts.
-    for (let weekStart = MON; weekStart < firstWeekDay; weekStart++) {
-        calendarFigure += "<td> </td>";
-    }
-    // Populate the days in the month
-    let currentDay = firstWeekDay;
-    for (let dayCounter = 1; dayCounter <= daysInThisMonth; dayCounter++) {
-
-        // Check if week ends, if so move to next row
-        currentDay %= WEEK_LENGTH;
-        if (currentDay === MON) {
-            calendarFigure += "</tr><tr>";
-        }
-
-        // Populates dates, highlighting the current day
-        if (dateToday === dayCounter) {
-            if (month === currentMonth && year === currentYear) {
-                calendarFigure += `<td class="currentDay"> ${dayCounter} </td>`;
-            } else {
-                calendarFigure += `<td class="monthDay"> ${dayCounter} </td>`;
-            }
-        } else {
-            calendarFigure += `<td class="monthDay"> ${dayCounter} </td>`;
-        }
-        currentDay += 1;
-    }
-    calendarFigure += "</tr>";
-    calendarFigure += "</table>";
-    document.getElementById("calHead").textContent = `${MONTHS[month].name} ${year}`;
-    document.getElementById("cal").innerHTML = calendarFigure;
 }
 
 
@@ -190,27 +142,6 @@ const update = {
 };
 
 
-/**
- * Update the calendar based on the arrow clicked by user
- * @param {function} funcToCall - calendar update function
- * @returns {number} - updates month, year, or both
- */
-/*function mainInit (funcToCall) {
-    document.getElementById("cal").innerHTML = "";
-    if (funcToCall === "calInit") {
-        calendar.month = currentMonth;
-        calendar.year = currentYear;
-    } else if (funcToCall === "plusMonth" || funcToCall === "minusMonth") {
-        const updateCal = update[funcToCall](calendar.month, calendar.year);
-        calendar.month = updateCal.newMonth;
-        calendar.year = updateCal.newYear;
-    } else {
-        calendar.year = update[funcToCall](calendar.year);
-    }
-    calInit(calendar.month, calendar.year);
-}*/
-
-
 function mainInit (funcToCall) {
     document.getElementById("drawCalendar").innerHTML = "";
     document.getElementById("dates").innerHTML = "";
@@ -236,10 +167,6 @@ function updateCalendar (evnt) {
     evnt.stopPropagation();
 }
 
-
-/*document.addEventListener("DOMContentLoaded", function () {
-    mainInit("calInit");
-}, false);*/
 
 document.addEventListener("DOMContentLoaded", function () {
     mainInit("drawCalendar");
