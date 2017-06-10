@@ -32,7 +32,7 @@ body {
 }
 
 .title {
-        font-size: 7vw;
+        font-size: 5vw;
         text-align: center;
         margin-top: 3%;
 }
@@ -61,7 +61,6 @@ body {
 
 .arrow {
         margin-bottom: 1%;
-
 }
 
 .cent {
@@ -77,12 +76,20 @@ body {
 }
 
 .month {
-        font-size: 7vw;
+        font-size: 6vw;
         margin-top: 3%;
 }
 
 .year-jump {
         margin-top: 5%;
+}
+
+.today-button {
+        font-size: 1em;
+}
+
+.title-block {
+        margin-top: 3%;
 }
 
 /* Modify for desktop */
@@ -103,6 +110,7 @@ body {
         .title-block {
                 margin-left: 12%;
                 margin-right: 12%;
+                margin-top: 0;
         }
 
         .day {
@@ -168,6 +176,7 @@ body {
         .title-block {
                 margin-right: 25%;
                 margin-left: 25%;
+                margin-top: 0;
         }
 
         .year-jump {

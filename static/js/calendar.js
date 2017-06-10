@@ -88,7 +88,7 @@ function drawCalendar (month, year) {
         calendarCell++;
     }
 
-    document.getElementById("title").textContent = `${MONTHS[month].name} ${year}`;
+    document.getElementById("drawCalendar").textContent = `${MONTHS[month].name} ${year}`;
     document.getElementById("dates").innerHTML = calendarDates;
 }
 
@@ -212,7 +212,7 @@ const update = {
 
 
 function mainInit (funcToCall) {
-    document.getElementById("title").innerHTML = "";
+    document.getElementById("drawCalendar").innerHTML = "";
     document.getElementById("dates").innerHTML = "";
     if (funcToCall === "drawCalendar") {
         calendar.month = currentMonth;
@@ -246,6 +246,11 @@ document.addEventListener("DOMContentLoaded", function () {
 }, false);
 
 document.addEventListener("DOMContentLoaded", function () {
-    const allButtons = document.getElementById("calendar");
+    const allButtons = document.getElementById("year-jump");
+    allButtons.addEventListener("click", updateCalendar, false);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const allButtons = document.getElementById("title-block");
     allButtons.addEventListener("click", updateCalendar, false);
 });
