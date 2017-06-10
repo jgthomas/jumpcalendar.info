@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JumpCalendar</title>
+        <link href='static/css/global.css' rel="stylesheet">
+        <link href='static/css/main.css' rel="stylesheet">
+        <link href="static/css/calendar.css" rel="stylesheet">
+        <link href="static/css/resize.css" rel="stylesheet" >
+    </head>
+    <body>
+        
+        <!--<div class="zoneBlock">
+            <div id="zoneLeft" class="timeZone">
+                <p id="homeName" class="tzname"></p>
+                <p id="homeTime" class="tzclock"></p>
+            </div>
+                
+            <div id="zoneCenter" class="timeZone">
+                <p id="zoneOneName" class="tzname"></p>
+                <p id="zoneOneTime" class="tzclock"></p>
+            </div>
+                
+            <div id="zoneRight" class="timeZone">
+                <p id="zoneTwoName" class="tzname"></p>
+                <p id="zoneTwoTime" class="tzclock"></p>
+            </div>
+        </div>-->
+        
+        <div id="dates">
+            <button id="minusCentury" class="timeArrow centArrow">&#10096;</button>
+            <button id="minusDecade" class="timeArrow decArrow">&#10094;</button>
+            <button id="minusYear" class="timeArrow yearArrow">&#10092;</button>
+            <button id="plusCentury" class="timeArrow centArrow">&#10097;</button>
+            <button id="plusDecade" class="timeArrow decArrow">&#10095;</button>
+            <button id="plusYear" class="timeArrow yearArrow">&#10093;</button>
+            <div id="calHead" class="tit"></div>
+            <div class="head">
+                <button id="minusMonth" class="btn but1">&#10232;</button>
+                <button id="calInit" class="btn butmid">&#8962;</button>
+                <button id="plusMonth" class="btn but2">&#10233;</button>
+            </div>
+            <div id="cal" class="shift_up"></div>
+        </div>
+            
+        <script src="static/js/calendar.js"></script>
+    </body>
+</html>

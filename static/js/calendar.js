@@ -56,6 +56,13 @@ function monthDays (month, year) {
 }
 
 
+function drawCalendar (month, year) {
+    const dateToday = fullDateToday.getDate();
+    const daysInThisMonth = monthDays(month, year);
+    const firstWeekDay = new Date(year, month).getDay();
+}
+
+
 function calInit (month, year) {
     const dateToday = fullDateToday.getDate();
     const daysInThisMonth = monthDays(month, year);
