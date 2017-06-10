@@ -1,0 +1,177 @@
+body {
+        font-family: sans-serif;
+}
+
+.flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: flex-start;
+}
+
+.flex-unit {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+}
+
+.flex-mini {
+        flex: 0 0 10.28%;
+}
+
+.flex-seventh {
+        flex: 0 0 14.28%;
+}
+
+.flex-quarter {
+        flex: 0 0 25%;
+}
+
+.flex-half {
+        flex: 0 0 50%;
+}
+
+.title {
+        font-size: 7vw;
+        text-align: center;
+        margin-top: 3%;
+}
+
+.current-day {
+        font-weight: bold;
+}
+
+/* Assume mobile */
+
+.flex-container {
+        margin-right: 5%;
+        margin-left: 5%;
+}
+
+.day {
+        font-size: 4vw;
+        margin-bottom: 5%;
+        margin-top: 10%;
+}
+
+.date {
+        font-size: 7vw;
+        margin-bottom: 10%;
+}
+
+.arrow {
+        margin-bottom: 1%;
+
+}
+
+.cent {
+        font-size: 5vw;
+}
+
+.dec {
+        font-size: 5vw;
+}
+
+.year {
+        font-size: 5vw;
+}
+
+.month {
+        font-size: 7vw;
+        margin-top: 3%;
+}
+
+.year-jump {
+        margin-top: 5%;
+}
+
+/* Modify for desktop */
+
+@media only screen and (min-device-width: 961px) {
+
+        .calendar {
+                margin-right: 15%;
+                margin-left : 15%;
+        }
+        
+        .year-jump {
+                margin-right: 15%;
+                margin-left : 15%;
+                margin-top: 0;
+        }
+
+        .title-block {
+                margin-left: 12%;
+                margin-right: 12%;
+        }
+
+        .day {
+                margin-bottom: 5%;
+                margin-top: 3%;
+                font-size: 1.75em;
+        }
+        
+        .date {
+                margin-bottom: 10%;
+                font-size: 3em;
+        }
+        
+        .title {
+                font-size: 1.75em;
+        }
+
+        .arrow {
+                margin-bottom: 1%;
+                text-align: top;
+                padding: 1%;
+        }
+
+        .cent {
+                font-size: 1.5em;
+        }
+
+        .dec {
+                font-size: 1.5em;
+        }
+
+        .year {
+                font-size: 1.5em;
+        }
+
+        .month {
+                font-size: 2.5em;
+        }
+}
+
+@media only screen and (min-width: 1280px) {
+
+        .flex-container {
+                margin-right: 25%;
+                margin-left: 25%;
+        }
+
+        .calendar {
+                margin-right: 25%;
+                margin-left : 25%;
+        }
+
+        .date {
+                margin-bottom: 5%;
+        }
+        
+        .year-jump {
+                margin-right: 15%;
+                margin-left : 15%;
+                margin-top: 0;
+        }
+
+        .title-block {
+                margin-right: 25%;
+                margin-left: 25%;
+        }
+
+        .year-jump {
+                margin-right: 25%;
+                margin-left : 25%;
+        }
+}

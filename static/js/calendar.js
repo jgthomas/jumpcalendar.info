@@ -60,6 +60,36 @@ function drawCalendar (month, year) {
     const dateToday = fullDateToday.getDate();
     const daysInThisMonth = monthDays(month, year);
     const firstWeekDay = new Date(year, month).getDay();
+    let calendarCell = 0;
+    let calendarDates = '';
+
+    // Fill first row of the month with empty cells until the month starts
+    for (let weekStart = 1; weekStart < firstWeekDay; weekStart++) {
+        calendarDates += '<div class="flex-unit flex-seventh date">&nbsp;</div>';
+        calendarCell++;
+    }
+
+    // Populate the days in the month
+    for (let dayCounter = 1; dayCounter <= daysInThisMonth; dayCounter++) {
+        if (dateToday === dayCounter) {
+            if (month === currentMonth && year === currentYear) {
+                calendarDates += `<div class="flex-unit flex-seventh date current-day"> ${dayCounter} </div>`;
+            } else {
+                calendarDates += `<div class="flex-unit flex-seventh date"> ${dayCounter} </div>`;
+            }
+        } else {
+            calendarDates += `<div class="flex-unit flex-seventh date"> ${dayCounter} </div>`;
+        }
+        calendarCell++;
+    }
+
+    while (calendarCell % 7 !== 0) {
+        calendarDates += '<div class="flex-unit flex-seventh date">&nbsp;</div>';
+        calendarCell++;
+    }
+
+    document.getElementById("title").textContent = `${MONTHS[month].name} ${year}`;
+    document.getElementById("dates").innerHTML = calendarDates;
 }
 
 
@@ -165,7 +195,7 @@ const update = {
  * @param {function} funcToCall - calendar update function
  * @returns {number} - updates month, year, or both
  */
-function mainInit (funcToCall) {
+/*function mainInit (funcToCall) {
     document.getElementById("cal").innerHTML = "";
     if (funcToCall === "calInit") {
         calendar.month = currentMonth;
@@ -178,8 +208,24 @@ function mainInit (funcToCall) {
         calendar.year = update[funcToCall](calendar.year);
     }
     calInit(calendar.month, calendar.year);
-}
+}*/
 
+
+function mainInit (funcToCall) {
+    document.getElementById("title").innerHTML = "";
+    document.getElementById("dates").innerHTML = "";
+    if (funcToCall === "drawCalendar") {
+        calendar.month = currentMonth;
+        calendar.year = currentYear;
+    } else if (funcToCall === "plusMonth" || funcToCall === "minusMonth") {
+        const updateCal = update[funcToCall](calendar.month, calendar.year);
+        calendar.month = updateCal.newMonth;
+        calendar.year = updateCal.newYear;
+    } else {
+        calendar.year = update[funcToCall](calendar.year);
+    }
+    drawCalendar(calendar.month, calendar.year);
+}
 
 function updateCalendar (evnt) {
     if (evnt.target !== evnt.currentTarget) {
@@ -191,12 +237,15 @@ function updateCalendar (evnt) {
 }
 
 
-document.addEventListener("DOMContentLoaded", function () {
+/*document.addEventListener("DOMContentLoaded", function () {
     mainInit("calInit");
+}, false);*/
+
+document.addEventListener("DOMContentLoaded", function () {
+    mainInit("drawCalendar");
 }, false);
 
-
 document.addEventListener("DOMContentLoaded", function () {
-    const allButtons = document.getElementById("dates");
+    const allButtons = document.getElementById("calendar");
     allButtons.addEventListener("click", updateCalendar, false);
 });
