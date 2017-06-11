@@ -71,12 +71,11 @@ function drawCalendar (month, year) {
         if (dateToday === dayCounter) {
             if (month === currentMonth && year === currentYear) {
                 calendarDates += `<div class="flex-unit flex-seventh date current-day"> ${dayCounter} </div>`;
-            } else {
-                calendarDates += `<div class="flex-unit flex-seventh date"> ${dayCounter} </div>`;
+                calendarCell++;
+                continue;
             }
-        } else {
-            calendarDates += `<div class="flex-unit flex-seventh date"> ${dayCounter} </div>`;
         }
+        calendarDates += `<div class="flex-unit flex-seventh date"> ${dayCounter} </div>`;
         calendarCell++;
     }
 
@@ -158,6 +157,12 @@ function mainInit (funcToCall) {
     drawCalendar(calendar.month, calendar.year);
 }
 
+
+/**
+ * Calls mainInit by passing the ID of the clicked element
+ * as the function that mainInit should use to
+ * update the calendar.
+ */
 function updateCalendar (evnt) {
     if (evnt.target !== evnt.currentTarget) {
         const func = evnt.target.id;
