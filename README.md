@@ -7,3 +7,5 @@
 * How many Thurdays were there in April 1922?
 
 Jump forward or back by month, year, decade or century to find out.
+
+![jumpcalendar.info](static/jumpCalendar.png)
