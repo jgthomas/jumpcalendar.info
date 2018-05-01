@@ -1,6 +1,6 @@
 # jumpcalendar.info
 
-### calendar for exploring the days of the month in any given year
+### Explore the days of the month in any given year
 
 * What day was it on the 1st of March 1998?
 
