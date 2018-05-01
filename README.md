@@ -2,7 +2,7 @@
 
 ### calendar for exploring the days of the month in any given year
 
-* Want to know what day it was on the 1st of March 1998?
+* What day was it on the 1st of March 1998?
 
 * How many Thurdays were there in April 1922?
 
